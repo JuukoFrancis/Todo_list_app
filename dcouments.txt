@@ -1,0 +1,15 @@
+1.  npm install vite@latest
+2.  npm install 
+
+To unblock the execution policy
+3.  Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+Insatling tailwind css  with vite
+1. npm install tailwindcss @tailwindcss/vite
+2. import tailwindcss from '@tailwindcss/vite'
+    tailwindcss(),
+
+
+ In your css 
+    @import "tailwindcss";
