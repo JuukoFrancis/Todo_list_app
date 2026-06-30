@@ -13,3 +13,17 @@ Insatling tailwind css  with vite
 
  In your css 
     @import "tailwindcss";
+
+
+
+    Imperative programming vs declarative programming{
+      we dont explain each step we do
+    }
+
+
+    Settings -> File Association -> key(*.css             -> value (tailwindcss))
+
+
+
+
+    React has Unidirectional data-flow
