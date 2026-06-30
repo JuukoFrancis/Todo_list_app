@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { dummyData } from "../data/todos";
 import TodoItem from "../components/TodoItem";
 import AddTodoForm from "../components/AddTodoForm";
+import Statistics from "../components/Statistics";
 
 function HomePage() {
   const [todos, setTodos] = useState(dummyData);
@@ -20,6 +21,11 @@ function HomePage() {
       { id: prevTodos.length + 1, title, completed: false },
     ]);
   }
+
+  function deleteTodo(id: number) {
+    setTodos((items) => items.filter((i) => i.id !== id));
+  }
+
   return (
     <div className="py-10 h-screen space-y-4">
       <h1 className="font-bold text-3xl text-center">Your Todos</h1>
@@ -32,9 +38,11 @@ function HomePage() {
               key={todos.id}
               todo={todos}
               onCompletedChange={setTodoCompleted}
+              ondeleteTodo={deleteTodo}
             />
           ))}
         </div>
+        <Statistics todos={todos} />
       </div>
     </div>
   );
